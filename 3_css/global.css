@@ -1,0 +1,305 @@
+/* Variabel */
+:root{
+    /* Layout */
+    --backgreen : rgb(3, 21, 21);
+    --darkgreen : rgb(2, 26, 24);
+    --midgreen : rgb(2, 63, 52);
+    --green : rgb(27, 126, 99);
+    --aquagreen : rgb(47, 179, 135);
+    --lightgreen : rgb(145, 234, 194);
+
+    --cardhover : linear-gradient(rgb(5, 28, 26) 20%, rgb(40, 90, 73) 90%);
+    --greygreen : rgb(164, 194, 175);
+
+    --minititle : linear-gradient(to top, var(--green), var(--lightgreen));
+
+    --lightgrey : rgb(157, 157, 157); /*news*/
+
+    /* Extra */
+    --whites : rgb(236, 236, 236);
+    --blacks : rgb(7, 7, 7);
+}
+
+@font-face{
+    font-family: 'K2D';
+    src: url('../5_font/K2D-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Wallpoet';
+    src: url('../5_font/Wallpoet-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Home */
+.glassmorph-effect{
+    backdrop-filter: blur(8px);
+    background: linear-gradient(rgba(2, 26, 24, 0.256), rgba(27, 126, 100, 0.228));
+    border-top: 1px solid rgba(46, 168, 150, 0.511);
+    border-left: 1px solid rgba(52, 142, 122, 0.249);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16);
+}
+
+/* Card Agent Style */
+.card-agent{
+    overflow: hidden;
+    transition: all .5s ease;
+    border-radius: 5px 30px;
+}
+
+.card-agent-border{
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    bottom: -2.5px;
+    border: 1.5px solid rgba(0, 0, 0, 0);
+    margin-top: 5px;
+    transition: all .3s ease;
+    border-radius: 5px 30px;
+}
+
+.card-agent-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: all .5s ease; */
+    overflow: hidden;
+    border-radius: 5px 30px;
+
+    background: var(--darkgreen);
+    backdrop-filter: blur(2px);
+    border-top: 1px solid var(--green);
+    border-left: 1px solid var(--midgreen);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16);
+    /* z-index: 0; */
+}
+
+a:hover{
+    .card-agent-border{
+      border: 1.5px solid var(--green);
+    }
+
+    .card-agent-content{
+        overflow: visible;
+        border: none;
+        box-shadow: none;
+        background: var(--cardhover);
+        z-index: 0;
+    }
+}
+
+/* Card Maps Style */
+#card-maps-style{
+    height: fit-content;
+    width: fit-content;
+    border: 1.5px 1.5px 0px 0px;
+    border-top: 1.5px solid var(--lightgreen);
+    border-left: 2px solid var(--green);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 7px 42px;
+    transition: all .3s ease;
+}
+
+#maps-content{
+    position: relative;
+    z-index: 0;
+    border-radius: 5px 40px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        position: relative;
+        z-index: 0;
+        mask-image: linear-gradient(rgb(3, 21, 21), rgba(3, 21, 21, 0.438));
+    }
+}
+
+#maps-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 126, 99, 0.477));
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#maps-desc{
+    /* height: 13vh; */
+    /* width: 60%; */
+    position: absolute;
+    z-index: 2;
+    /* box-sizing: border-box; */
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+
+    h2{
+        font-family: "Wallpoet";
+        font-weight: 100;
+        /* font-size: 90px; */
+        padding-bottom: 5px;
+        background: var(--minititle);
+        filter: drop-shadow( 0px 0px 5px var(--midgreen));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    p{
+        /* margin-bottom: 20px; */
+        /* font-size: 16px; */
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        color: var(--greygreen);
+    }
+}
+
+
+#card-maps-style:hover{
+    border: 1.5px solid var(--green);
+    padding: 5px;
+    cursor: pointer;
+
+    #maps-content::after {
+        opacity: 1;
+    }
+
+    #maps-desc p{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+}
+
+/* Card News Style */
+#news-link{
+    border: 1.5px solid rgba(0, 222, 148, 0);
+    border-radius: 20px;
+    transition: all .5s ease;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: fit-content;
+}
+
+#news-card{
+    padding-bottom: 50px;
+    margin: 5px;
+    border-radius: 14px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(3, 10, 8);
+    transition: all .5s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.473);
+    /* flex-wrap: wrap; */
+
+    .news-desc{
+        position: relative;
+        z-index: 2;
+        margin-top: 15px;
+        color: white;
+    }
+
+    .news-info{
+        font-family: "K2D", sans-serif;
+        font-size: 16px;
+        margin: 0px 20px 0px 20px;
+        display: flex;
+        gap: 12px;
+        justify-content: start;
+        align-items: center;    
+    }
+
+    .category{
+        background-color: var(--midgreen);
+        color: rgb(255, 255, 255);
+        padding: 5px 10px 5px 10px;
+        border-radius: 14px;
+    }
+
+    .separator{
+        width: 2px;
+        height: 16px;
+        background-color: var(--midgreen);
+        border-radius: 5px;
+    }
+
+    .news-headline{
+        margin: 8px 20px 0px 20px; 
+        font-family: "K2D", sans-serif;
+        font-size: 28px;
+        max-width: 100%;
+        line-height: 28px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .news-overview{
+        margin: 7px 20px 0px 20px;
+        max-width: 85%;
+        font-family: "K2D";
+        font-size: 14px;
+        text-align: left;
+        color: var(--lightgrey);
+    }
+}
+
+#news-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--midgreen));
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+#news-card img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px 14px 0px 0px;
+    z-index: 1;
+    mask-image: linear-gradient(rgb(3, 21, 21), rgba(3, 21, 21, 0.438));
+    transition: all .3s ease;
+}
+
+.news-image{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+#news-link:hover{
+    border: 1.5px solid var(--green);
+
+    #news-card::after{
+        opacity: 1;
+    }
+
+    #news-card img{
+        transform: scale(1.1);
+    }
+
+}

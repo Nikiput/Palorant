@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../3_css/navbar.css">
+    <link rel="stylesheet" href="../3_css/global.css">
+    <link rel="stylesheet" href="../3_css/report.css">
+    <link rel="stylesheet" href="../3_css/footer.css">
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img class="logo" src="../1_image/PalorantLogo.png" alt="Palorant Logo"></a>
+    
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="agent.html">AGENT</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li class="mobile-report"><a href="report.html"><button class="navbarButton">REPORT</button></a></li>
+            </ul>
+        </nav>
+
+        <a class="desktop-report" href="report.html"><button class="navbarButton">REPORT</button></a>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <script src="../4_js/navbar.js"></script>
+    </section>    
+
+    <section id = "bug-report" >
+
+        <div class="left-bug-report">
+            <div class="report-content">
+                <h2>Report Bug</h2>
+                <div class="separator"></div>
+                <p>Encountered an issue while playing Palorant? Let us know! Your report helps us improve the game and ensure a smoother experience for everyone.</p>
+            </div>
+            <img src="../1_image/report/Background.png" alt="">
+        </div>
+
+        <div class="right-bug-report">
+            <div class="report-box glassmorph-effect">
+                <div id="success-message" class="success-message" style="display: none;">
+                    Report successfully submitted!
+                </div>
+
+                <form id="report-form">
+                    <div class="form-content">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Username">
+                        <div class="error error-username"></div>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Example = palorant@email.com">
+                        <div class="error error-email"></div>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="server">Server</label>
+                        <select id="server">
+                          <option value="">Choose Server</option>
+                          <option>Asia</option>
+                          <option>Europe</option>
+                          <option>North America</option>
+                          <option>South America</option>
+                          <option>Australia</option>
+                        </select>
+                        <div class="error error-server"></div>
+                      </div>
+
+                    <div class="form-content">
+                        <label for="description">Bug Description</label>
+                        <textarea id="description"></textarea>
+                        <div class="check-desc">
+                            <div class="error error-description"></div>
+                            <p id="result"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-content">
+                        <label for="documentation">Upload Photo (Optional)</label>
+                        <div class="custom-file">
+                            <input type="file" id="documentation" accept="image/*" />
+                            <label for="documentation" class="custom-file-label">Choose File</label>
+                            <span id="file-name">No file chosen</span>
+                          </div>
+                      </div>
+
+                    <label>
+                    <input type="checkbox" id="agreement" />
+                    I agree to all terms and policies
+                    </label>
+                    <div class="error-agreement error-message"></div>
+
+                    <button type="submit">Send Report</button>
+                </form>
+
+
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="logo-giot">
+                <img src="../1_image/GiotGames.png" alt="GiotGames.png">
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Home</a></li>
+                    <li><a href="agent.html">Agents</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="report.html">Report</a></li>
+                </ul>
+            </div>
+            
+            <div class="footerBottom">
+                <p>@2025 Giot Games, Inc. GIOT GAMES, PALORANT, and all logos and pictures are trademark, service marks, and/or registered trademarks of Valorant, Riot Games, Inc</p>
+            </div>
+            
+            <div class="socialIcons">
+                <a href=""><img class="socmed-logo" src="../1_image/footer/instagram.png" alt="instagram.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/facebook.png" alt="facebook.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/mail.png" alt="mail.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/youtube.png" alt="youtube.png"></a>
+                
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../4_js/report.js"></script>
+</body>
+</html>

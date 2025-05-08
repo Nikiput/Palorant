@@ -1,0 +1,329 @@
+@import url('global.css');
+
+body {
+    margin: 0;
+    height: 1440px;
+    font-family: "K2D";
+    background-color: rgb(3, 21, 21);
+}
+
+#latest-news {
+    max-width: 100%;
+    height: 550px;
+    margin-bottom: 20px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 50px 5px;
+    z-index: 100;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(3, 21, 21, 0.977) 5%, transparent);
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider .list .item .content {
+    position: absolute;
+    margin: 10px;
+    padding-left: 50px;
+    top: 40%;
+    z-index: 1;
+    color: white;
+}
+
+.content .news-info {
+    font-size: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: start;
+    align-items: center;
+}
+
+.content .news-info .category {
+    background-color: var(--green);
+    color: var(--whites);
+    padding: 5px 10px;
+    border-radius: 14px;
+}
+
+.content .news-info .separator {
+    width: 3px;
+    height: 24px;
+    background-color: var(--green);
+    border-radius: 10px;
+}
+
+.content .news-headline {
+    margin: 5px 0 10px 0;
+    line-height: 68px;
+    font-size: 68px;
+    font-weight: 600;
+    width: 70vw;
+    transition: color .3s ease-in-out;
+}
+
+.content .news-headline:hover {
+    color: var(--lightgreen);
+    cursor: pointer;
+}
+
+.content .news-overview {
+    width: 40vw;
+    font-size: 16px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0.233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    top: 59%;
+    right: 60px;
+    z-index: 100;
+}
+
+.arrows button {
+    background-color: var(--midgreen);
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: x-large;
+    color: white;
+}
+
+.arrows button:hover {
+    background-color: var(--lightgreen);
+    color: black;
+    transition: .5s;
+}
+
+.dots {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.dots li.active {
+    background-color: var(--lightgreen);
+}
+
+#featured-news {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: "Wallpoet";
+    font-size: 60px;
+    font-weight: 20;
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    background: var(--minititle);
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 0px 5px var(--midgreen));
+}
+
+#featured-news .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    padding: 0 0px;
+    margin: 0 60px;
+}
+
+#featured-news .news-size {
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 400px;
+}
+
+.news-container .news-image {
+    height: 160px;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.386), black);
+
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (max-width: 1105px) {
+    #latest-news {
+        height: 450px;
+        margin-bottom: 40px;
+    }
+
+    .content .news-headline {
+        line-height: 50px;
+        font-size: 60px;
+        width: 80%;
+    }
+
+    .content .news-overview {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .arrows {
+        gap: 5px;
+        right: 30px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+        padding-bottom: 2px;
+    }
+
+    #featured-news .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        margin: 0 50px;
+    }
+
+    .news-container .news-image {
+        height: 150px;
+    }
+
+    #featured-news h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 851px) {
+    #latest-news {
+        height: 420px;
+    }
+
+    .content .news-headline {
+        line-height: 40px;
+        font-size: 45px;
+        width: 80%;
+    }
+
+    .content .news-overview {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    #featured-news .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin: 0 20px;
+    }
+
+    .slider .list .item .content {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 725px) {
+    #latest-news {
+        height: 420px;
+    }
+
+    .content .news-headline {
+        line-height: 40px;
+        font-size: 40px;
+        width: 70%;
+    }
+
+    .content .news-overview {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    .news-container .news-image {
+        height: 180px;
+    }
+
+    .slider .list .item .content {
+        padding-left: 30px;
+    }
+
+    #featured-news h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 510px) {
+    #latest-news {
+        height: 380px;
+        margin-bottom: 20px;
+    }
+
+    .content .news-headline {
+        line-height: 30px;
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .content .news-overview {
+        width: 60%;
+        font-size: 11px;
+    }
+
+    #featured-news .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        margin: 0 20px;
+    }
+
+    .news-container .news-image {
+        height: 140px;
+    }
+
+    .slider .list .item .content {
+        padding-left: 20px;
+    }
+
+    #featured-news h1 {
+        font-size: 45px;
+    }
+}

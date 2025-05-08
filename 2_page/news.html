@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalorantNews</title>
+
+    <link rel="stylesheet" href="../3_css/navbar.css">
+    <link rel="stylesheet" href="../3_css/global.css">
+    <link rel="stylesheet" href="../3_css/news.css">
+    <link rel="stylesheet" href="../3_css/footer.css">
+
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img class="logo" src="../1_image/PalorantLogo.png" alt="Palorant Logo"></a>
+    
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="agent.html">AGENT</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html"  class="active">NEWS</a></li>
+                <li class="mobile-report"><a href="report.html"><button class="navbarButton">REPORT</button></a></li>
+            </ul>
+        </nav>
+
+        <a class="desktop-report" href="report.html"><button class="navbarButton">REPORT</button></a>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <script src="../4_js/navbar.js"></script>
+    </section>    
+
+    <section id="latest-news">
+        <div class="slider">
+            <div class="list">
+                <div class="item active">
+                    <img src="../1_image/home/Valorant_EP8_Teaser_CypherReborn.jpg" alt="spect.png">
+                    <div class="content">
+                        <div class="news-info">
+                            <div class="category">
+                                <h6>GAME UPDATE</h6>
+                            </div>
+                            <div class="separator"></div>
+                            <h6 class="date">09/01/2024</h6>
+                        </div>
+                        <a href="news/spect.html">
+                            <div class="news-headline">Meet SPECT : The Phantom Watcher</div>
+                        </a>
+                        <p class="news-overview">
+                            A shadow moves where no one is looking—a presence felt, but never seen. 
+                            Enter Spect, the newest agent to join the fight, 
+                            bringing deception, surveillance, and a deadly mind to the battlefield.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../1_image/home/China_CG_phxcool_fullres.jpg" alt="patchNote.png">
+                    <div class="content">
+                        <div class="news-info">
+                            <div class="category">
+                                <h6>GAME UPDATE</h6>
+                            </div>
+                            <div class="separator"></div>
+                            <h6 class="date">10/03/2024</h6>
+                        </div>
+                        <a href="news/patchNote.html">
+                            <div class="news-headline">Palorant First Patch Note 01.01</div>
+                        </a>
+
+                        <p class="news-overview">
+                            The latest update is here! Patch 01.01 introduces a brand new Agent, 
+                            a fresh map, and essential balance changes for the game. 
+                            Check out the full patch notes below!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../1_image/news/Article3.png" alt="spring.png">
+                    <div class="content">
+                        <div class="news-info">
+                            <div class="category">
+                                <h6>COMMUNITY</h6>
+                            </div>
+                            <div class="separator"></div>
+                            <h6 class="date">05/15/2024</h6>
+                        </div>
+                        <a href="news/spring.html">
+                            <div class="news-headline">Spring Awakens : A Season of Renewal in Palorant</div>
+                        </a>
+                        
+                        <p class="news-overview">
+                            As the frost melts away and vibrant blossoms emerge, 
+                            Palorant welcomes the arrival of spring with open arms.  
+                            This season brings a refreshing change, 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- button prev and next -->
+             <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+             </div>
+
+             <!-- dot -->
+              <ul class="dots">
+                <li  class="active"></li>
+                <li></li>
+                <li></li>
+              </ul>
+        </div>
+
+    </section>
+
+    <section id="featured-news">
+        <h1>FEATURED</h1>
+        <div class="news-container">
+            <a id="news-link" href="news/patchNote.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/home/China_CG_phxcool_fullres.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>GAME UPDATE</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">10/03/2024</h6>
+                            </div>
+                            <div class="news-headline">Palorant First Patch Note 1.1</div>
+                            <p class="news-overview">
+                                The latest update is here! Patch 1.1 introduces a brand new Agent, 
+                                a fresh map, and essential balance changes for the game. 
+                                Check out the full patch notes below!
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a id="news-link" href="news/spect.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/home/Valorant_EP8_Teaser_CypherReborn.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>GAME UPDATE</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">09/01/2024</h6>
+                            </div>
+                            <div class="news-headline">Meet SPECT : The Phantom Watcher</div>
+                            <p class="news-overview">
+                                A shadow moves where no one is looking—a presence felt, 
+                                but never seen. Enter Specter, the newest agent to join the fight, bringing deception, 
+                                surveillance, and a deadly mind to the battlefield.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a id="news-link" href="news/spring.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/news/Article3.png" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>COMMUNITY</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">05/15/2024</h6>
+                            </div>
+                            <div class="news-headline">Spring Awakens: 
+                                A Season of Renewal in Palorant</div>
+                            <p class="news-overview">
+                                As the frost melts away and vibrant blossoms emerge, 
+                                Palorant welcomes the arrival of spring with open arms.  This season brings a refreshing change
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a id="news-link" href="news/aNewEra.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/news/Article2.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>E - SPORT</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">03/23/2024</h6>
+                            </div>
+                            <div class="news-headline">Palorant: A New Era of Tactical FPS Begins</div>
+                            <p class="news-overview">
+                                The world of competitive FPS has a new contender—Palorant. 
+                                Blending precision gunplay, strategic teamwork, and unique Agent abilities. 
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a id="news-link" href="news/palorantHere.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/news/Article.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>GAME UPDATE</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">12/01/2024</h6>
+                            </div>
+                            <div class="news-headline">Palorant is Here: The Future of Tactical FPS Begins</div>
+                            <p class="news-overview">
+                                The world of tactical FPS just got a new contender! 
+                                Palorant has officially opened its doors to players hungry for strategy, 
+                                fast reflexes, and intense action.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="logo-giot">
+                <img src="../1_image/GiotGames.png" alt="GiotGames.png">
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Home</a></li>
+                    <li><a href="agent.html">Agents</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="report.html">Report</a></li>
+                </ul>
+            </div>
+            
+            <div class="footerBottom">
+                <p>@2025 Giot Games, Inc. GIOT GAMES, PALORANT, and all logos and pictures are trademark, service marks, and/or registered trademarks of Valorant, Riot Games, Inc</p>
+            </div>
+            
+            <div class="socialIcons">
+                <a href=""><img class="socmed-logo" src="../1_image/footer/instagram.png" alt="instagram.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/facebook.png" alt="facebook.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/mail.png" alt="mail.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/youtube.png" alt="youtube.png"></a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="../4_js/news.js"></script>
+</body>
+</html>

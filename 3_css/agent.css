@@ -1,0 +1,667 @@
+@import url('global.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "K2D";
+    background-color: var(--backgreen);
+    color: white;
+    font-family: "K2D";
+}
+
+/* Agent Header */
+#headline-agent{
+    max-height: 400px;
+    background-image: linear-gradient(rgba(34, 87, 70, 0.906),rgba(3, 21, 21, 0.979))
+                        ,url(../1_image/agents/agents_background.png);
+    border-radius: 0px 0px 50px 5px;
+    padding: 75px 0px 80px 45px;
+    border-bottom: 0.5px solid var(--green);
+    overflow: hidden;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-family: "Wallpoet";
+        font-weight: 100;
+        font-size: 100px;
+        padding-bottom: 5px;
+        filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+        background: linear-gradient(to top, var(--green), var(--lightgreen));
+        -webkit-background-clip: text;
+        color: transparent;
+        z-index: 1;
+    }
+
+    p{
+        color: var(--greygreen);
+        font-size: 20px;
+        width: 50%;
+        z-index: 1;
+    }
+
+    h4{
+        position: absolute;
+        font-family: "Wallpoet";
+        font-weight: 100;
+        font-size: 120px;
+        top: 100px;
+        text-align: right;
+        line-height: 80px;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--lightgreen);
+        z-index: 1;
+        opacity: 0.05;
+    }
+}
+
+#headline-agent .effect{
+    position: absolute;
+    max-height: 450px;
+    opacity: 0.8;
+    max-width: 100%;
+    min-width: 90%;
+    mask-image: linear-gradient(rgba(0, 0, 0, 0.612),rgba(0, 0, 0, 0));
+    top: 0;
+}
+
+.effect img{
+    object-fit: cover;
+}
+
+/* List Agent */
+#agent-list{
+    /* width: 100%; */
+    margin: 10px 60px;
+}
+
+.filter-buttons-desktop{
+    position: relative;
+    width: 100%;
+    margin: 5px auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.25px solid var(--midgreen);
+    border-radius: 5px 20px;
+
+    button{
+        flex: 1;
+        color: var(--green);
+        padding: 20px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
+        border-radius: 5px 20px;
+        transition: all .3s ease-in-out;
+    }
+
+    button.active{
+        border: 1px solid var(--lightgreen);
+        filter: drop-shadow( 0px 0px 5px var(--lightgreen));
+        color: var(--lightgreen);
+        /* background: var(--green); */
+    }
+
+    button:hover{
+        color: var(--lightgreen);
+    }
+}
+
+.filter-buttons-mobile{
+    cursor: pointer;
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--midgreen);
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    option{
+        background: var(--backgreen);
+    }
+}
+
+.filter-buttons-mobile:hover {
+    color: var(--lightgreen);
+    border-color: var(--lightgreen);
+    filter: drop-shadow(0 0 5px var(--green));
+}
+
+.filter-buttons-mobile {
+    display: none;
+  }
+
+.explanation-class{
+    font-size: 20px;
+    color: var(--greygreen);
+}
+
+.agent-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.agent-container a{
+    flex-basis: 355px;
+    height: 480px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.agent-container .card-size{
+    width: 345px;
+    height: 460px;
+    margin: 5px;
+
+    .agent-photo{
+        position: relative;
+        object-fit: cover;
+        transition: all .3s ease;
+        transform: scale(0.8) translateX(8%) translateY(18%);
+        mask-image: linear-gradient(black 40%, rgba(127, 255, 212, 0) 65%);
+        z-index: 1;
+    }
+    
+    .background-card{
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        top: 10px;
+        left: -50px;
+        opacity: 0.1;
+        filter: drop-shadow(0px 0px 5px var(--lightgreen));
+        transition: all .5s ease;
+    
+        mask-image: linear-gradient(rgba(0, 0, 0, 0.628), rgba(0, 0, 0, 0));
+    }
+
+}
+
+.agent-container a:hover{
+    
+    .background-card{
+        opacity: 0.6;
+    }
+
+    .agent-photo{
+        transform: scale(0.82) translateX(8%) translateY(17%);
+    }
+    
+}
+
+.agent-info{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    padding: 0px 0px 20px 20px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-family: "K2D";
+    color: white;
+    background: linear-gradient(to top, rgba(4, 40, 28, 0.546), rgba(127, 255, 212, 0));
+
+    h2{
+        font-family: "Wallpoet";
+        font-size: 60px;
+        font-weight: 100;
+        filter: drop-shadow(0px 0px 5px rgb(3, 34, 26));
+        background: var(--minititle);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    h3{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+}
+
+.agent-info #agent-class{
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    opacity: 0.7;
+
+    img{
+        height: 25px;
+        aspect-ratio: 1/1;
+    }
+}
+
+#explanation {
+    padding: 20px 40px;
+    color: var(--greygreen);
+    opacity: 0.4;
+    border-left: 2px solid var(--green);
+    border-right: 1px solid var(--green);
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 10px var(--green));
+}
+
+#explanation .show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    #agent-list{
+        margin: 10px 40px;
+    }
+
+    #headline-agent{
+        /* height: 45vh; */
+        border-radius: 0px 0px 50px 5px;
+        padding: 75px 0px 70px 45px;
+        border-bottom: 0.5px solid var(--green);
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    
+        h1{
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 90px;
+            padding-bottom: 5px;
+            filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+            background: linear-gradient(to top, var(--green), var(--lightgreen));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    
+        p{
+            color: var(--greygreen);
+            font-size: 18px;
+            width: 55%;
+        }
+    
+        h4{
+            position: absolute;
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 90px;
+            top: 100px;
+            text-align: right;
+            line-height: 80px;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--lightgreen);
+            opacity: 0.05;
+        }
+    }
+
+    .agent-container{
+        gap: 10px;
+    }
+
+    .agent-container a{
+        flex-basis: 300px;
+        height: 400px;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .agent-container .card-size{
+        width: 290px;
+        height: 380px;
+        margin: 5px;
+
+        .agent-photo{
+            position: relative;
+            object-fit: cover;
+            transition: all .3s ease;
+            transform: scale(0.71) translateX(5%) translateY(20%);
+            mask-image: linear-gradient(black 40%, rgba(127, 255, 212, 0) 65%);
+            z-index: 1;
+        }
+    }
+
+    .agent-container a:hover{
+    
+        .background-card{
+            opacity: 0.6;
+        }
+    
+        .agent-photo{
+            transform: scale(0.72) translateX(6%) translateY(19%);
+        }
+        
+    }
+}
+
+@media (max-width: 860px) {
+    #agent-list{
+        margin: 10px 20px;
+    }
+
+    #headline-agent{
+        /* height: 40vh; */
+        border-radius: 0px 0px 50px 5px;
+        padding: 75px 0px 60px 45px;
+        border-bottom: 0.5px solid var(--green);
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    
+        h1{
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 80px;
+            padding-bottom: 5px;
+            filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+            background: linear-gradient(to top, var(--green), var(--lightgreen));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    
+        p{
+            color: var(--greygreen);
+            font-size: 16px;
+            width: 55%;
+        }
+    
+        h4{
+            position: absolute;
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 80px;
+            top: 100px;
+            text-align: right;
+            line-height: 70px;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--lightgreen);
+            opacity: 0.05;
+        }
+    }
+
+    .filter-buttons-desktop {
+        display: none;
+      }
+    
+    .filter-buttons-mobile {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0px 20px;
+    }
+
+    #explanation{
+        padding: 0px 20px;
+        margin: 10px 20px;
+    }
+
+    .agent-container{
+        gap: 10px;
+    }
+
+    .agent-container a{
+        flex-basis: 310px;
+        height: 400px;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .agent-container .card-size{
+        width: 300px;
+        height: 380px;
+        margin: 5px;
+
+        .agent-photo{
+            position: relative;
+            object-fit: cover;
+            transition: all .3s ease;
+            transform: scale(0.71) translateX(5%) translateY(20%);
+            mask-image: linear-gradient(black 40%, rgba(127, 255, 212, 0) 65%);
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width : 675px){
+    #headline-agent{
+        /* height: 35vh; */
+        border-radius: 0px 0px 50px 5px;
+        padding: 75px 0px 50px 45px;
+        border-bottom: 0.5px solid var(--green);
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    
+        h1{
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 60px;
+            padding-bottom: 5px;
+            filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+            background: linear-gradient(to top, var(--green), var(--lightgreen));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    
+        p{
+            color: var(--greygreen);
+            font-size: 16px;
+            width: 80%;
+        }
+    
+        h4{
+            position: absolute;
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 60px;
+            top: 100px;
+            text-align: right;
+            line-height: 50px;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--lightgreen);
+            opacity: 0.05;
+        }
+    }
+
+    #agent-list{
+        margin: 10px 10px;
+    }
+
+    .agent-container a{
+        flex-basis: 250px;
+        height: 350px;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .agent-container .card-size{
+        width: 240px;
+        height: 330px;
+        margin: 5px;
+
+        .agent-photo{
+            position: relative;
+            object-fit: cover;
+            transition: all .3s ease;
+            transform: scale(0.62) translateX(5%) translateY(20%);
+            mask-image: linear-gradient(black 40%, rgba(127, 255, 212, 0) 65%);
+            z-index: 1;
+        }
+    }
+
+    .agent-container a:hover{
+    
+        .background-card{
+            opacity: 0.6;
+        }
+    
+        .agent-photo{
+            transform: scale(0.63) translateX(6%) translateY(19%);
+        }
+        
+    }
+}
+
+@media (max-width : 530px){
+    #headline-agent{
+        /* height: 35vh; */
+        border-radius: 0px 0px 50px 5px;
+        padding: 75px 0px 50px 35px;
+        border-bottom: 0.5px solid var(--green);
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    
+        h1{
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 50px;
+            padding-bottom: 5px;
+            filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+            background: linear-gradient(to top, var(--green), var(--lightgreen));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    
+        p{
+            color: var(--greygreen);
+            font-size: 11px;
+            width: 80%;
+        }
+    
+        h4{
+            position: absolute;
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 40px;
+            top: 140px;
+            text-align: right;
+            line-height: 30px;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--lightgreen);
+            opacity: 0.05;
+        }
+    }
+
+    #agent-list{
+        margin: 10px 5px;
+    }
+
+    .agent-container{
+        gap: 5px;
+    }
+
+    .agent-container a{
+        flex-basis: 190px;
+        height: 260px;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .agent-container .card-size{
+        width: 180px;
+        height: 240px;
+        margin: 5px;
+
+        .agent-photo{
+            position: relative;
+            object-fit: cover;
+            transition: all .3s ease;
+            transform: scale(0.52) translateX(5%) translateY(23%);
+            mask-image: linear-gradient(black 40%, rgba(127, 255, 212, 0) 65%);
+            z-index: 1;
+        }
+    }
+
+    .agent-container a:hover{
+    
+        .background-card{
+            opacity: 0.6;
+        }
+    
+        .agent-photo{
+            transform: scale(0.53) translateX(6%) translateY(22%);
+        }
+        
+    }
+
+    .agent-info{
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-start;
+        padding: 0px 0px 10px 10px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        font-family: "K2D";
+        color: white;
+        background: linear-gradient(to top, rgba(4, 40, 28, 0.546), rgba(127, 255, 212, 0));
+    
+        h2{
+            font-family: "Wallpoet";
+            font-size: 40px;
+            font-weight: 100;
+            filter: drop-shadow(0px 0px 5px rgb(3, 34, 26));
+            background: var(--minititle);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    
+        h3{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        #agent-class{
+            position: relative; 
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 10px;
+            opacity: 0.7;
+        
+            img{
+                height: 19px;
+                aspect-ratio: 1/1;
+            }
+        }
+        
+    }
+
+    .filter-buttons-mobile {
+        display: block;
+        padding: 10px;
+        font-size: 11px;
+        margin: 0px 20px;
+    }
+
+    #explanation{
+        margin: 0px 20px;
+        padding: 10px;
+        font-size: 12px;
+    }
+}

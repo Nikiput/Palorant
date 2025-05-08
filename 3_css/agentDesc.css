@@ -1,0 +1,538 @@
+@import url('global.css');
+
+body{
+    font-family: "K2D";
+    background-color: var(--backgreen);
+    color: var(--greygreen);
+}
+
+/* Agent Desc */
+#desc{
+    /* padding: 0px 20px 0px 20px; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    overflow: hidden;
+    background-image: linear-gradient(var(--backgreen) 40%,var(--midgreen) 90%);
+    border-bottom: 1px solid var(--green);
+    border-radius: 0px 0px 50px 10px;
+} 
+
+/* left content */
+#desc .left-container{
+    max-height: 600px;
+    min-height: 500px;
+    justify-content: start;
+}
+
+#desc .left-container .agent-photo{
+    max-height: 600px;
+    min-height: 500px;
+    width: 40%;
+    object-position: -90% -20%;
+    transform: translateX(50px);
+    mask-image: linear-gradient(black 80%, rgba(0, 0, 0, 0.208) 98%);
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+#desc .left-container .background-agent{
+    aspect-ratio: 2/3;
+    position: relative;
+    background-image: linear-gradient(rgb(50, 138, 108), black);
+    overflow: hidden;
+    z-index: 0;
+    border: 1px solid var(--lightgreen);
+    border-bottom: none;
+    mask-image: linear-gradient(rgb(3, 21, 21), rgba(3, 21, 21, 0.226));
+}
+
+#desc .left-container .background-agent img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transform: scale(1.9) translateX(-50px) translateY(90px);
+    filter: blur(0.5px);
+}
+
+/* right content */
+#desc .right-container{
+    margin: 0px 50px 0px 0px;
+    position: relative;
+    width: fit-content;
+}
+
+#desc .right-container h1{
+    font-family: "Wallpoet";
+    font-weight: 100;
+    font-size: 150px;
+    text-align: left;
+    position: absolute;
+    top: -80px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--midgreen);
+}
+
+#desc .right-container .content{
+    padding: 0px 50px;
+    width: 600px;
+    align-items: center;
+    position: relative;
+}
+
+#desc .right-container .content h2{
+    font-family: "Wallpoet";
+    font-weight: 100;
+    font-size: 120px;
+    filter: drop-shadow( 0px 0px 50px var(--blacks));
+    background: var(--minititle);
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 10;
+}
+
+#desc .right-container .agent-class{
+    padding: 10px 75px 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    border-radius: 10px 20px;
+    border: 1px solid transparent;
+    background: linear-gradient( to right, var(--midgreen), var(--backgreen)) padding-box,
+                linear-gradient(to right, var(--green) 1%, rgba(255, 166, 0, 0) 100%) border-box;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+#desc .right-container .agent-class h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+#desc .right-container .agent-class img{
+    height: 35px;
+    width: 35px;
+}   
+
+#desc .right-container .separator{
+    height: 1px;
+    background: linear-gradient(to left, var(--green), rgba(0, 178, 137, 0));
+}
+
+#desc .right-container p{
+    margin: 20px 0px;
+    font-size: 20px;
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Agent Skill */
+#skill{
+    padding: 50px 0px 0px 20px;
+}
+
+#skill h4{
+    font-size: 120px;
+    font-family: "Wallpoet";
+    font-weight: 100;
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--midgreen);
+    filter: drop-shadow( 0px 0px 30px var(--green));
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 90px 20px;
+}
+
+#skill .left-skill-container{
+    aspect-ratio: 3/2;
+    /* max-width: 600px; */
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    transition: .5s ease-in-out;
+    border-radius: 10px 40px;
+    border-top: 2px var(--green) solid;
+    border-bottom: 2px var(--green) solid;
+    padding: 10px;
+    z-index: 2; 
+}
+
+.left-skill-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    border-radius: 10px 40px;
+}
+
+#skill .right-skill-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+    left: -5px;
+}
+
+#skill .right-skill-container .skill-info{
+    padding: 100px 50px 100px 50px;
+    border-radius: 10px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1%, var(--green) 80%);
+    border-right: 1px solid var(--midgreen);
+    border-bottom: 1px solid var(--green);
+    position: relative;
+    width: 70%;
+    z-index: 1;
+}
+
+#skill .right-skill-container h5{
+    text-transform: uppercase;
+    font-size: 36px;
+    filter: drop-shadow( 0px 0px 10px var(--midgreen));
+}
+
+#skill .right-skill-container p{
+    font-size: 16px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+#skill .skill-image{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    /* gap: 30px; */
+    padding: 100px 20px 30px 100px;
+    background-color: rgba(39, 155, 118, 0.361);
+    z-index: 0;
+    left: -70px;
+
+    border-radius: 10px 40px;
+
+    backdrop-filter: blur(2px);
+    border-top: 1px solid var(--green);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16);
+}
+
+#skill .skill-image .skill{
+    max-height: 60px;
+    min-height: 30px;
+    aspect-ratio: 1 / 1;
+    opacity: 0.3;
+    transition: .5s;
+}
+
+#skill .skill-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#skill .skill-image .skill:hover{
+    opacity: 1;
+}
+
+#skill .skill-image .skill.active{
+    opacity: 1;
+}
+
+@media (max-width:1165px){
+
+    #desc .right-container .content{
+        padding: 0px 50px;
+        width: 550px;
+        align-items: center;
+        position: relative;
+    }
+
+    #desc .left-container .agent-photo{
+        max-height: 500px;
+        width: 45%;
+        object-position: -90% -10%;
+    }
+
+    #desc .left-container .background-agent{
+        max-height: 600px;
+        min-height: 500px;
+    }
+
+    #desc .right-container p{
+        font-size: 18px;
+    }
+    
+
+    #skill{
+        padding: 30px 0px;
+
+        h4{
+            font-size: 150px;
+            left: 30px;
+        }
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 50px;
+    }
+
+    #skill .right-skill-container{
+        flex-direction: column;
+        left: 0px;
+        order: 1;
+        z-index: 99;
+        top: 60px;
+
+        .skill-info{
+            width: 100%;
+            padding: 50px 50px 100px 50px;
+            order: 2;
+            top: -40px;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 1%, var(--green) 80%);
+            border-left: 0;
+            border-top: 2px solid var(--green);
+            border-bottom: 0;
+            /* border-top: 1px solid var(--green); */
+
+        }
+
+        .skill-image{
+            width: fit-content;
+            padding: 10px 70px 50px 40px;
+            justify-content: flex-start;
+            gap: 40px;
+            left: 0px;
+            order: 1;
+            flex-direction: row;
+        }
+    }
+
+    #skill .left-skill-container{
+        order: 2;
+    }
+}
+
+@media (max-width:1000px){
+    #desc{
+        flex-direction: column;
+        border-radius: 0px;
+        gap: 70px;
+        border-radius: 20px 0px 70px 20px;
+        overflow: hidden;
+
+        .left-container{
+            /* max-height: 200px; */
+            min-height: 500px;
+            /* margin: 10px; */
+            width: 80%;
+            overflow: hidden;
+            border-radius: 20px 0px 70px 20px;
+            border-bottom: 2px solid var(--green);
+            border-left: 2px solid var(--green);
+
+            .agent-photo{
+                max-height: 600px;
+                min-height: 500px;
+                width: 100vw;
+                object-position: 90% -1%;
+                transform: translateX(-150px);
+                mask-image: linear-gradient(black 80%, rgba(0, 0, 0, 0) 98%);
+            }
+            
+            .background-agent{
+                aspect-ratio: 0;
+                height: 100%;
+                width: 100%;
+
+                img{
+                    opacity: 0.1;
+                    transform: scale(1.9) translateX(50px) translateY(150px);
+                    filter: blur(0.5px);
+                }
+            }
+        }
+
+        .right-container .content{
+            padding: 0px 0px 100px 0px;
+            align-items: center;
+            position: relative;
+
+            p{
+                max-width: 100%;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 725px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+        padding: 0px;
+    }
+
+
+    #skill{
+        padding: 30px 10px;
+
+        h4{
+            font-size: 80px;
+            left: 30px;
+        }
+    }
+
+    #skill .right-skill-container{
+
+        .skill-info{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 30px 30px 60px 30px;
+            order: 2;
+            top: -40px;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 1%, var(--green) 80%);
+            border-left: 0;
+            border-top: 2px solid var(--green);
+            border-bottom: 0;
+            /* border-top: 1px solid var(--green); */
+        }
+
+        .skill-image{
+            width: fit-content;
+            padding: 10px 50px 50px 20px;
+            justify-content: flex-start;
+            border-radius: 5px 30px;
+            gap: 20px;
+            left: 0px;
+            order: 1;
+            flex-direction: row;
+
+            .skill{
+                max-height: 35px;
+                min-height: 20px;
+                aspect-ratio: 1 / 1;
+                opacity: 0.3;
+                transition: .5s;
+            }
+        }
+
+        h5{
+            text-transform: uppercase;
+            font-size: 24px;
+            filter: drop-shadow( 0px 0px 10px var(--midgreen));
+        }
+
+        p{
+            font-size: 12px;
+            text-align: left;
+            padding-top: 10px;
+        }
+    } 
+
+    #desc{
+        flex-direction: column;
+        border-radius: 0px;
+        gap: 50px;
+        border-radius: 20px 0px 70px 20px;
+        overflow: hidden;
+
+        .left-container{
+            max-height: 400px;
+            min-height: 200px;
+            width: 90%;
+
+            .agent-photo{
+                max-height: 400px;
+                min-height: 200px;
+                width: 100vw;
+                object-position: 90% -1%;
+                transform: translateX(-70px);
+            }
+            
+            .background-agent{
+                aspect-ratio: 0;
+                height: 100%;
+                width: 100%;
+
+                img{
+                    opacity: 0.1;
+                    transform: scale(1.9) translateX(20px) translateY(100px);
+                    filter: blur(0.5px);
+                }
+            }
+        }
+
+        .right-container{
+            margin: 0px 50px 0px 50px;
+            position: relative;
+            width: fit-content;
+    
+            h1{
+                font-family: "Wallpoet";
+                font-weight: 100;
+                font-size: 80px;
+                text-align: left;
+                position: absolute;
+                top: -40px;
+                color: transparent;
+                -webkit-text-stroke: 1px var(--midgreen);
+            }
+            
+            .content{
+                padding: 0px 0px 80px 0px;
+                width: 100%;
+                align-items: center;
+                position: relative;
+            }
+            
+            .content h2{
+                font-size: 80px;
+            }
+            
+            .agent-class{
+                padding: 10px 55px 10px 20px;
+                gap: 15px;
+            }
+            
+            .agent-class h3{
+                font-size: 16px;
+            }
+            
+            .agent-class img{
+                height: 20px;
+                width: 20px;
+            }   
+            
+            .separator{
+                height: 1px;
+                background: linear-gradient(to left, var(--green), rgba(0, 178, 137, 0));
+            }
+            
+            p{
+                margin: 20px 0px;
+                font-size: 14px;
+                max-width: 100%;
+                text-align: left;
+            }
+        }
+    }
+    
+
+    
+}

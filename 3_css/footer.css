@@ -1,0 +1,177 @@
+@import url('global.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'K2D';
+}
+
+footer{
+    margin-top: 50px;
+    background-color: var(--blacks);
+    border-radius: 5px 50px 0px 0px;
+    border-top: 1px solid var(--midgreen);
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-giot{
+    aspect-ratio: 7/2;
+    max-height: 40px;
+    min-height: 20px;
+}
+
+.logo-giot img{
+    height: 100%;
+    width: 100%;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(37, 37, 37);
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.socialIcons .socmed-logo {
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    transform: scale(2);
+}
+
+.socialIcons .socmed-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: rgb(78, 77, 77);
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a{
+    color:white;
+    margin: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+    color: var(--lightgreen);
+}
+
+.footerBottom{
+    padding-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.footerBottom p{
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 700px){
+
+    .footerContainer{
+        width: 100%;
+        padding: 70px 10px 40px;
+    }
+
+    .footerNav ul li a{
+        color:white;
+        margin: 20px;
+        font-size: 15px;
+    }
+    
+    .footerBottom{
+        width: 70%;
+    }
+    
+    .footerBottom p{
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 500px){
+
+    .logo-giot{
+        aspect-ratio: 7/2;
+        max-height: 30px;
+        min-height: 20px;
+    }
+
+    .footerContainer{
+        width: 100%;
+        padding: 50px 10px 40px;
+    }
+
+    .footerNav ul li a{
+        color:white;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    .footerBottom{
+        width: 90%;
+    }
+
+    .footerBottom p{
+        font-size: 12px;
+    }
+    
+    .socialIcons a {
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .socialIcons .socmed-logo {
+        aspect-ratio: 1 / 1;
+        max-width: 100%;
+        transform: scale(3);
+    }
+}

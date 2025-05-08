@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant</title>
+    <link rel="stylesheet" href="../3_css/navbar.css">
+    <link rel="stylesheet" href="../3_css/global.css">
+    <link rel="stylesheet" href="../3_css/home.css">
+    <link rel="stylesheet" href="../3_css/footer.css">
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img class="logo" src="../1_image/PalorantLogo.png" alt="Palorant Logo"></a>
+    
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="agent.html">AGENT</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li class="mobile-report"><a href="report.html"><button class="navbarButton">REPORT</button></a></li>
+            </ul>
+        </nav>
+
+        <a class="desktop-report" href="report.html"><button class="navbarButton">REPORT</button></a>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <script src="../4_js/navbar.js"></script>
+    </section>    
+
+    <section id="palorant">
+        <div class="title">
+            <h1>PALORANT</h1>
+            <h4>5v5 Tactical Showdown, Choose Your Legend</h4>
+            <button>Play Now</button>
+        </div>
+        <img src="../1_image/home/Background_Home.png" alt="">
+    </section>
+
+    <section id="aboutPalorant">
+        <h2>ABOUT PALORANT</h2>
+        <img src="../1_image/PalorantLogo_Border.png" alt="" class="background">
+        <div class="aboutPalorant-box">
+            <div class="left-about glassmorph-effect">
+                <h3>CONQUER ALL, DOMINATE THE BATTLE</h3>
+                <p>Showcase your skills and strategy on the global competitive 
+                    stage! Fight through 13 rounds, attacking or defending with 
+                    precision and tactics. With only one life per round, quick decisions are key to survival. 
+                    Experience the thrill across different game modes!</p>   
+            </div>  
+            <div class="right-about">
+                <video autoplay loop src="../1_image/home/compress_about_palorant.mp4"></video>
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>LATEST NEWS</h2>
+        <div class="news-container">
+            <a id="news-link" href="news/patchNote.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/home/China_CG_phxcool_fullres.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>GAME UPDATE</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">10/03/2024</h6>
+                            </div>
+                            <div class="news-headline">Palorant First Patch Note 1.1</div>
+                            <p class="news-overview">
+                                The latest update is here! Patch 1.1 introduces a brand new Agent, 
+                                a fresh map, and essential balance changes for the game. 
+                                Check out the full patch notes below!
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+
+            <a id="news-link" href="news/spect.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/home/Valorant_EP8_Teaser_CypherReborn.jpg" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>GAME UPDATE</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">09/01/2024</h6>
+                            </div>
+                            <div class="news-headline">Meet SPECT : The Phantom Watcher</div>
+                            <p class="news-overview">
+                                A shadow moves where no one is looking—a presence felt.
+                                Enter Spect, the newest agent to join the fight.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a id="news-link" href="news/spring.html">
+                <div id="news-card" class="news-size" >
+                    <div class="news-content">
+                        <div class="news-image">
+                            <img src="../1_image/news/Article3.png" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-info">
+                                <div class="category">
+                                    <h6>COMMUNITY</h6>
+                                </div>
+                                <div class="separator"></div>
+                                <h6 class="date">05/15/2024</h6>
+                            </div>
+                            <div class="news-headline">Spring Awakens: 
+                                A Season of Renewal in Palorant</div>
+                            <p class="news-overview">
+                                As the frost melts away and vibrant blossoms emerge.
+                                 This season brings a refreshing change
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+
+        <a href="news.html" class="view-button">
+            <button>View More</button>
+        </a>
+
+    </section>
+
+    <section id="agents">
+        <div class="agent-box">
+            <div class="left-agent-box">
+                <!-- <div class="best-agent-exp">
+                    <h2>SEASON 1'S BEST AGENT</h2>
+                </div> -->
+                <div class="background-cards"></div>
+                <a class="card card-agent" href="agents/sawi.html">
+                    <div class="card-agent-border">
+                        <div class="card-agent-content card-size">
+                            <img class="agent-photo" src="../1_image/agents/Sage/Sage.png" alt="Sawi.png">
+                            <!-- <h5>SAWI</h5> -->
+                             <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                            <div class="agent-info">
+                                <h2>SAWI</h2>
+                                <div id="agent-class">
+                                    <img src="../1_image/agents/Sentinel.png" alt="Guardian.png">
+                                    <h3>Guardian<h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <div class="card card-agent">
+                    <div class="card-agent-border">
+                        <div class="card-agent-content card-size">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-agent">
+                    <div class="card-agent-border">
+                        <div class="card-agent-content card-size">
+                            
+                        </div>
+                    </div>
+                </div>            
+            </div>
+
+
+            <div class="right-agent-box">
+                <h2>AGENT</h2>  
+                <div class="right-agent-desc">
+                    <h3>DEFINE GAME, CONQUER ALL</h3>
+                    <p>Choose an Agent with unique skills and a lethal combat style. 
+                    Each Agent brings a different strategy, 
+                    just as every player has their own way of shooting. 
+                    Master the game with a playstyle that is truly yours.</p>
+                    <a href="agent.html">
+                        <button>View More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="maps">
+        <div class="maps-container">
+            <div class="maps-left">
+                <div class="maps-content">
+                    <h2>MAPS</h2>
+                    <h3>FIGHT ACROSS ALL FRONTS</h3>
+                    <p>Each map is a battlefield for strategy and thrilling action. 
+                        Designed for teamwork, intense battles, and unforgettable moments. 
+                        Showcase your skills and become part of gaming history.
+                    </p>
+                    <a href="maps.html">
+                        <button>View More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="maps-right">
+                <div class="slider">
+                    <div class="gallery">
+                        <div class="item">
+                            <h2>Lotos</h2>
+                            <img src="../1_image/maps/Lotus/Lotus.png" alt="Lotos.png">
+                        </div>
+        
+                        <div class="item">
+                            <h2>Havert</h2>
+                            <img src="../1_image/maps/Ascent/Ascent.png" alt="Havert.png">
+                        </div>
+        
+                        <div class="item">
+                            <h2>Pool</h2>
+                            <img src="../1_image/maps/Pearl/Pearl.png" alt="Pool.png">
+                        </div>
+    
+                        <div class="item">
+                            <h2>Chain</h2>
+                            <img src="../1_image/maps/Breeze/Breeze.png" alt="Chain.png">
+                        </div>
+    
+                        <div class="item">
+                            <h2>Freeze</h2>
+                            <img src="../1_image/maps/Icebox/Icebox.png" alt="Freeze.png">
+                        </div>
+                    </div>
+                     <!-- button arrows -->
+                    <div class="arrows">
+                        <button id="prev"><<</button>
+                        <button id="next">>></button>
+                    </div>  
+                    
+                </div>
+            </div>
+            
+            <img id="background" src="../1_image/home/China_CG_phxcool_fullres.jpg" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="logo-giot">
+                <img src="../1_image/GiotGames.png" alt="GiotGames.png">
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Home</a></li>
+                    <li><a href="agent.html">Agents</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="report.html">Report</a></li>
+                </ul>
+            </div>
+            
+            <div class="footerBottom">
+                <p>@2025 Giot Games, Inc. GIOT GAMES, PALORANT, and all logos and pictures are trademark, service marks, and/or registered trademarks of Valorant, Riot Games, Inc</p>
+            </div>
+            
+            <div class="socialIcons">
+                <a href=""><img class="socmed-logo" src="../1_image/footer/instagram.png" alt="instagram.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/facebook.png" alt="facebook.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/mail.png" alt="mail.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/youtube.png" alt="youtube.png"></a>
+                
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../4_js/home.js"></script>
+</body>
+</html>

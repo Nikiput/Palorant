@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalorantAgent</title>
+
+    <link rel="stylesheet" href="../3_css/navbar.css">
+    <link rel="stylesheet" href="../3_css/global.css">
+    <link rel="stylesheet" href="../3_css/agent.css">
+    <link rel="stylesheet" href="../3_css/footer.css">
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img class="logo" src="../1_image/PalorantLogo.png" alt="Palorant Logo"></a>
+    
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="agent.html" class="active">AGENT</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li class="mobile-report"><a href="report.html"><button class="navbarButton">REPORT</button></a></li>
+            </ul>
+        </nav>
+
+        <a class="desktop-report" href="report.html"><button class="navbarButton">REPORT</button></a>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <script src="../4_js/navbar.js"></script>
+    </section>    
+    
+    <section id="headline-agent">
+        <h4>DEFINE GAME, CONQUER ALL</h4>
+        <h1>AGENT</h1>
+        <p>An Agent is a skilled operative with unique abilities that shape the battlefield. 
+            Each Agent brings a distinct playstyle, from securing kills to defending and controlling space.
+        </p>
+        <img class="effect" src="../1_image/effect.png" alt="">
+    </section>
+
+    <section id="agent-list">
+        <div class="filter-button">
+            <div class="filter-buttons-desktop">
+                <button class="active" data-name="all">All</button>
+                <button data-name="guardian">Guardian</button>
+                <button data-name="tactictor">Tactictor</button>
+                <button data-name="striker">Striker</button>
+            </div>
+
+            <select class="filter-buttons-mobile">
+                <option value="all">All</option>
+                <option value="guardian">Guardian</option>
+                <option value="tactictor">Tactictor</option>
+                <option value="striker">Striker</option>
+              </select>
+        </div>
+
+        <div id="explanation-class">
+            <p id="explanation"></p>
+        </div>
+
+        <div class="agent-container">
+            <a class="card-agent" data-name="guardian" href="agents/sawi.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Sage/Sage.png" alt="Sawi.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>SAWI</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Sentinel.png" alt="Guardian.png">
+                                <h3>Guardian</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card-agent" data-name="striker" href="agents/gacco.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Gekko/Gekko.png" alt="gacco.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>GACCO</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Duelist.png" alt="Striker.png">
+                                <h3>Striker</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card-agent" data-name="tactictor" href="agents/ski.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Skye/Skye.png" alt="ski.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>SKI</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Initiator.png" alt="Tactictor.png">
+                                <h3>Tactictor</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card-agent" data-name="guardian" href="agents/spect.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Cypher/Cypher.png" alt="spect.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>SPECT</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Sentinel.png" alt="Guardian.png">
+                                <h3>Guardian</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card-agent" data-name="striker" href="agents/jezz.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Jett/Jett.png" alt="jezz.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>JEZZ</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Duelist.png" alt="Striker.png">
+                                <h3>Striker</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card-agent" data-name="tactictor" href="agents/soijoy.html">
+                <div class="card-agent-border">
+                    <div class="card-agent-content card-size">
+                        <img class="agent-photo" src="../1_image/agents/Killjoy/Killjoy.png" alt="soijoy.png">
+                        <!-- <h5>SAWI</h5> -->
+                         <img src="../1_image/PalorantLogo_Border.png" alt="" class="background-card">
+                        <div class="agent-info">
+                            <h2>SOIJOY</h2>
+                            <div id="agent-class">
+                                <img src="../1_image/agents/Initiator.png" alt="Tactictor.png">
+                                <h3>Tactictor</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+ 
+    <footer>
+        <div class="footerContainer">
+            <div class="logo-giot">
+                <img src="../1_image/GiotGames.png" alt="GiotGames.png">
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Home</a></li>
+                    <li><a href="agent.html">Agents</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="report.html">Report</a></li>
+                </ul>
+            </div>
+            
+            <div class="footerBottom">
+                <p>@2025 Giot Games, Inc. GIOT GAMES, PALORANT, and all logos and pictures are trademark, service marks, and/or registered trademarks of Valorant, Riot Games, Inc</p>
+            </div>
+            
+            <div class="socialIcons">
+                <a href=""><img class="socmed-logo" src="../1_image/footer/instagram.png" alt="instagram.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/facebook.png" alt="facebook.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/mail.png" alt="mail.png"></a>
+                <a href=""><img class="socmed-logo" src="../1_image/footer/youtube.png" alt="youtube.png"></a>
+                
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../4_js/agent.js"></script>
+</body>
+</html>
