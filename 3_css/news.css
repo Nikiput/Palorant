@@ -194,8 +194,6 @@ h1 {
 
 }
 
-/* RESPONSIVE BREAKPOINTS */
-
 @media (max-width: 1105px) {
     #latest-news {
         height: 450px;
@@ -262,6 +260,11 @@ h1 {
     .slider .list .item .content {
         padding-left: 25px;
     }
+
+    #featured-news h1 {
+       margin: 0;
+       padding: 30px;
+    }
 }
 
 @media (max-width: 725px) {
@@ -325,5 +328,7 @@ h1 {
 
     #featured-news h1 {
         font-size: 45px;
+        padding: 30px;
+        margin:  0;
     }
 }

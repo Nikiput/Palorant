@@ -19,7 +19,6 @@ const result = document.getElementById("result");
 const limit = 10000;
 result.textContent = "0/" + limit;
 
-// ===== Helper function =====
 function setError(inputKey, message) {
   errors[inputKey].textContent = message;
   inputs[inputKey].classList.add("input-error");
@@ -30,7 +29,6 @@ function clearError(inputKey) {
   inputs[inputKey].classList.remove("input-error");
 }
 
-// ===== Real-time validation =====
 inputs.username.addEventListener("input", () => {
   const val = inputs.username.value.trim();
   if (val.length < 3) {
@@ -82,7 +80,6 @@ inputs.agreement.addEventListener("change", () => {
   }
 });
 
-// ===== On submit validation =====
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   let isValid = true;
@@ -129,14 +126,12 @@ form.addEventListener('submit', (e) => {
   }
 
   if (isValid) {
-    // Tampilkan pesan sukses
     const successBox = document.getElementById("success-message");
     successBox.style.display = "block";
   
     Object.values(inputs).forEach(input => input.disabled = true);
     form.querySelector('button[type="submit"]').disabled = true;
 
-    // Optional: biar tetap kelihatan
     form.querySelector('button[type="submit"]').classList.add('disabled');
   }
 });

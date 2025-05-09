@@ -1,6 +1,6 @@
 @import url('global.css');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +14,11 @@ body {
     color: white;
 }
 
-h2{
+#description{
+    font-family: 'K2D';
+}
+
+h2 {
     font-family: "Wallpoet";
     font-weight: 100;
     font-size: 60px;
@@ -38,73 +42,68 @@ h2{
     font-weight: bold;
 }
 
-#bug-report{
+#bug-report {
     width: 100%;
     height: 650px;
     display: flex;
     flex-direction: row;
-    
-    /* border: 1px solid salmon; */
-
-    .left-bug-report{
-        width: 45%;
-        height: 100%;
-        /* background-color: aqua; */
-        display: flex;  
-        justify-content: center;
-        flex-direction: column;
-        
-
-        img{
-            position: absolute;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.678),rgba(0, 0, 0, 0));
-            z-index: 0;
-        }
-
-        .report-content{
-            margin-left: 60px;
-            z-index: 1;
-        }
-
-        .separator{
-            height: 2px;
-            border-radius: 10px;
-            max-width: 80%;
-            margin: 10px 0px;
-            background: linear-gradient( to right, var(--lightgreen), rgba(0, 0, 0, 0));
-        }
-
-        p{
-            text-align: left;
-            max-width: 80%;
-            font-size: 16px;
-        }
-    }
-
-    .right-bug-report{  
-        width: 55%;
-        height: 100%;
-        /* background-color: aqua; */
-        align-items: center;
-        justify-content: center;
-        display: flex;
-
-        .report-box{
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px 35px;
-            padding: 20px 50px;
-        }
-    }
 }
 
-#report-form{
+.left-bug-report {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-bug-report img {
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0));
+    z-index: 0;
+}
+
+.left-bug-report .report-content {
+    margin-left: 60px;
+    z-index: 1;
+}
+
+.left-bug-report .separator {
+    height: 2px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 10px 0px;
+    background: linear-gradient(to right, var(--lightgreen), rgba(0, 0, 0, 0));
+}
+
+.left-bug-report p {
+    text-align: left;
+    max-width: 80%;
+    font-size: 16px;
+}
+
+.right-bug-report {
+    width: 55%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.right-bug-report .report-box {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 35px;
+    padding: 20px 50px;
+}
+
+#report-form {
     width: 100%;
     color: var(--lightgreen);
 }
@@ -116,22 +115,25 @@ h2{
     flex-direction: column;
 }
 
-label{
+label {
     padding-bottom: 5px;
 }
 
-#username, #email, #server, #description{
+#username,
+#email,
+#server,
+#description {
     padding: 10px;
     border: 1px solid var(--green);
     border-radius: 5px;
-    background: transparent; 
-}   
+    background: transparent;
+}
 
-#description{
+#description {
     height: 10vh;
 }
 
-textarea{
+textarea {
     display: block;
     width: 100%;
     color: var(--whites);
@@ -142,64 +144,66 @@ textarea{
 textarea::-webkit-scrollbar {
     width: 12px;
 }
-  
+
 textarea::-webkit-scrollbar-track {
-    background: transparent; /* atau sesuaikan dengan background kamu */
+    background: transparent;
 }
-  
+
 textarea::-webkit-scrollbar-thumb {
-    background-color: var(--midgreen); /* warna thumb-nya */
+    background-color: var(--midgreen);
     border-radius: 5px;
     border: 5px solid transparent;
     background-clip: content-box;
     transition: all .5s ease;
 }
-  
+
 textarea::-webkit-scrollbar-thumb:hover {
     background-color: var(--green);
 }
 
-.check-desc{
+.check-desc {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-p{
+p {
     font-size: 12px;
     text-align: right;
     margin-top: 5px;
     color: var(--greygreen);
 }
 
-select{
+select {
     color: var(--greygreen);
-
-    option{
-        background: rgb(2, 63, 52);
-    }
 }
 
-.error{
+select option {
+    background: rgb(2, 63, 52);
+}
+
+.error {
     color: red;
     visibility: visible;
     font-size: 12px;
 }
 
 /* Styling teks dan kursor putih */
-input, textarea, select {
+input,
+textarea,
+select {
     color: white;
     caret-color: white;
     background-color: transparent;
     border: 1px solid var(--green);
 }
-  
+
 input::placeholder,
 textarea::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
-  /* Border merah kalau error */
+/* Border merah kalau error */
 .input-error {
     border-color: red !important;
 }
@@ -208,9 +212,9 @@ textarea::placeholder {
     color: red;
     font-size: 12px;
     margin-top: 4px;
-  }
-  
-  /* Text merah untuk counter kalau error */
+}
+
+/* Text merah untuk counter kalau error */
 .text-error {
     color: red !important;
 }
@@ -220,13 +224,13 @@ textarea::placeholder {
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
-  }
-  
-  .custom-file input[type="file"] {
-    display: none; /* sembunyikan aslinya */
-  }
-  
-  .custom-file-label {
+}
+
+.custom-file input[type="file"] {
+    display: none;
+}
+
+.custom-file-label {
     color: white;
     border: 1px solid var(--green);
     padding: 8px 10px;
@@ -234,19 +238,19 @@ textarea::placeholder {
     cursor: pointer;
     font-size: 14px;
     transition: all 0.3s ease;
-  }
-  
-  .custom-file-label:hover {
+}
+
+.custom-file-label:hover {
     background-color: var(--midgreen);
-  }
-  
-  #file-name {
+}
+
+#file-name {
     color: var(--lightgrey);
     font-size: 12px;
     overflow: hidden;
-  }
+}
 
-button{
+button {
     background: none;
     border: 1px solid var(--green);
     padding: 15px;
@@ -262,108 +266,101 @@ button{
 
 button:disabled,
 button.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-button:hover{
+button:hover {
     background-color: var(--lightgreen);
     color: var(--blacks);
     border: 1px solid transparent;
 }
 
-@media (max-width : 1080px){
-    #bug-report{
+@media (max-width: 1080px) {
+    #bug-report {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
-        .left-bug-report{
-            width: 100%;
-            /* background-color: aqua; */
-            display: flex;  
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-    
-            img{
-                position: absolute;
-                background-size: cover;
-                height: 100%;
-                width: 100%;
-                z-index: 0;
-                mask-image: linear-gradient(rgba(0, 0, 0, 0.678) 10%, rgba(0, 0, 0, 0) 80%);
-            }
-    
-            .report-content{
-                z-index: 1;
-                width: 100%;
-                margin: 50px auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-    
-            .separator{
-                height: 2px;
-                border-radius: 10px;
-                width: 100%;
-                background: linear-gradient( to right, var(--lightgreen), rgba(0, 0, 0, 0));
-            }
-    
-            p{
-                text-align: center;
-                font-size: 16px;
-            }
+    .left-bug-report {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-            h2{
-                font-family: "Wallpoet";
-                font-weight: 100;
-                font-size: 60px;
-                margin-bottom: 5px;
-                text-transform: uppercase;
-                filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
-                background: linear-gradient(var(--green), var(--lightgreen));
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-            
-        }
-    
-        .right-bug-report{
-            width: 100%;
-            height: 100%;
-        }
+    .left-bug-report img {
+        position: absolute;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        mask-image: linear-gradient(rgba(0, 0, 0, 0.678) 10%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .left-bug-report .report-content {
+        z-index: 1;
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-bug-report .separator {
+        height: 2px;
+        border-radius: 10px;
+        width: 100%;
+        background: linear-gradient(to right, var(--lightgreen), rgba(0, 0, 0, 0));
+    }
+
+    .left-bug-report p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-family: "Wallpoet";
+        font-weight: 100;
+        font-size: 60px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+        background: linear-gradient(var(--green), var(--lightgreen));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .right-bug-report {
+        width: 100%;
+        height: 100%;
     }
 }
 
-@media (max-width : 480px){
-    #bug-report{
+@media (max-width: 480px) {
+    #bug-report {
+        .left-bug-report p {
+            text-align: center;
+            font-size: 14px;
+        }
 
-        .left-bug-report{
-
-            p{
-                text-align: center;
-                font-size: 14px;
-            }
-
-            h2{
-                font-family: "Wallpoet";
-                font-weight: 100;
-                font-size: 40px;
-                margin-bottom: 3px;
-                text-transform: uppercase;
-                filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
-                background: linear-gradient(var(--green), var(--lightgreen));
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-            
+        h2 {
+            font-family: "Wallpoet";
+            font-weight: 100;
+            font-size: 40px;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            filter: drop-shadow(0px 0px 5px rgba(4, 32, 24, 0.559));
+            background: linear-gradient(var(--green), var(--lightgreen));
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 }

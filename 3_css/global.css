@@ -283,6 +283,8 @@ a:hover{
     z-index: 1;
     mask-image: linear-gradient(rgb(3, 21, 21), rgba(3, 21, 21, 0.438));
     transition: all .3s ease;
+    object-position: top center;
+
 }
 
 .news-image{

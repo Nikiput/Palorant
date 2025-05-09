@@ -4,7 +4,7 @@ const expData = [
         exp : "",
     },
     {
-        exp : "Tacticians specialize in disrupting enemy positions and setting up fights in their team’s favor. Whether through scouting, stunning, or controlling space, they help coordinate attacks and ensure teammates enter engagements with an advantage.",
+        exp : "Tactictor specialize in disrupting enemy positions and setting up fights in their team’s favor. Whether through scouting, stunning, or controlling space, they help coordinate attacks and ensure teammates enter engagements with an advantage.",
     },
     {
         exp : "Guardians are the defensive backbone of any team, focused on securing key areas, supporting allies, and denying enemy advances. With traps, barriers, and healing abilities, they maintain control over the battlefield and ensure their team stays in the fight.",
@@ -17,7 +17,7 @@ const expData = [
 const explanations = document.getElementById('explanation');
 const filterButtons = document.querySelectorAll(".filter-buttons-desktop button");
 const dropdown = document.querySelector(".filter-buttons-mobile");
-const filterCard = document.querySelectorAll(".card");
+const filterCard = document.querySelectorAll(".card-agent");
 
 const filterCards = (selectedName) => {
     filterButtons.forEach(btn => {
